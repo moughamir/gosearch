@@ -16,8 +16,5 @@
     "deploy": "gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "lodash": "^4.17.10"
   }
 }
