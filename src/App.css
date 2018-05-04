@@ -1,23 +1,110 @@
-.App {
-  text-align: center;
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+.App{
+    font-family: 'Roboto', sans-serif;
 }
-
-.App-logo {
-  height: 80px;
-}
-
 .App-header {
-  height: 50vh;
+  height: 50px;
   padding: 20px;
+  background: transparent;
+  border: 1px solid #e4e4e4;
+  box-sizing: border-box;
 }
 
-.App-title {
-  font-size: 1.5em;
+.App-content {
+  height: 100%;
+  transform: translateY(50%);
 }
 
-.App-intro {
-  font-size: large;
+.App-footer--nav {
+  display: inline-block;
 }
+
+.App-footer--nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.App-footer--nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 0 5px;
+  box-sizing: border-box;
+  color: #666;
+}
+
+.nav-left{float: left;}
+.nav-right{float: right;}
+
 .App-banner {
-    height: 190px;
+  height: 190px;
+  width: 100%;
+}
+
+.container {
+  max-width: 484px;
+  margin: 0 auto;
+}
+
+.footer-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.App-search_input {
+  height: 44px;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px 15px;
+  border-radius: 2px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.16), 0 0 0 1px rgba(0, 0, 0, 0.08);
+  border: none;
+  margin: 10px 0;
+  transition: all .3s linear;
+}
+
+.App-search_input:hover,
+.App-search_input:active,
+.App-search_input:focus {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0 2px 2px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+}
+
+.App-footer {
+  bottom: 0;
+  font-size: 10pt;
+  height: 44px;
+  position: absolute;
+  width: 100%;
+  background: #f2f2f2;
+  border-top: 1px solid #e4e4e4;
+  line-height: 40px;
+  box-sizing: border-box;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  background-color: #f2f2f2;
+  border: 1px solid #f2f2f2;
+  border-radius: 2px;
+  color: #757575;
+  font-size: 13px;
+  font-weight: bold;
+  margin: 11px 4px;
+  min-width: 54px;
+  padding: 0 16px;
+  text-align: center;
+  cursor: pointer;
+  height: 36px;
+  transition: box-shadow 0.3s linear;
+}
+
+.button:hover {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }

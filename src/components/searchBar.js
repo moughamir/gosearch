@@ -19,31 +19,11 @@ export default class SearchBar extends React.Component {
   
   Search(e) {
     e.preventDefault();
-    fetch('https://jsonplaceholder.typicode.com/posts')
-      .then(response => {
-        if (response.status !== 200) {
-          console.log('Looks like there was a problem. Status Code: ' +
-            response.status);
-          return;
-
-        }
-        else {
-          response.json().then(data => this.setState({ data: data }));
-        }
-      }).then(
-          this.state.data.map((n,i) => {
-            console.log(n.body.includes(this.state.query));
-            
-          })
-        
-      )
-      .catch(err => { console.log(err) });
-
     console.log('Search ' + this.state.query);
   }
   getLucky(e) {
     e.preventDefault();
-    console.log('I\'m Lucky' + e);
+    console.log('I\'m Lucky ' + this.state.query);
   }
 
   render() {
@@ -51,7 +31,9 @@ export default class SearchBar extends React.Component {
       <div className="App-search_bar">
         <form action=''>
           <input type="text" placeholder="Search..." value={this.state.query}  className="App-search_input" onChange={this.handleInput}/>
-          <button onClick={this.Search}>Search</button><button onClick={this.getLucky}>I'm lucky</button>
+          <div className="button-group">
+            <button className="button" onClick={this.Search}>Search</button><button className="button" onClick={this.getLucky}>I'm lucky</button>
+          </div>
         </form>
       </div>
     );
